@@ -17,15 +17,22 @@ export const setTodos = (todos) => ({
     payload: todos
 });
 
-let nextTodoId = 0;
-
-export const addTodo = (content) => ({
-    type: ADD_TODO,
-    payload: {
-        id: ++nextTodoId,
-        content
-    }
-});
+export const addTodo = (todo) => (dispatch) => {
+    fetch('/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(todo),
+    })
+        .then((response) => response.json())
+        .then((newTodo) => {
+            dispatch({
+                type: ADD_TODO,
+                payload: newTodo
+            });
+        });
+};
 
 export const toggleTodo = (id) => ({
     type: TOGGLE_TODO,

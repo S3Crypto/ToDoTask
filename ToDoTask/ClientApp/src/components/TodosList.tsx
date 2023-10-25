@@ -1,15 +1,12 @@
 ﻿import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getTodos } from '../actions/todosActions';
+import AddTodo from './AddTodo';
+import { Todo } from './Todo';
 
 function TodosList() {
     const dispatch = useDispatch();
 
-    interface Todo {
-        id: number;
-        description: string;
-        isCompleted: boolean;
-    }
     interface RootState {
         todos: Todo[];
     }
@@ -34,6 +31,7 @@ function TodosList() {
                     <li key={todo.id}>{todo.description}</li>
                 ))}
             </ul>
+            <AddTodo />
         </div>
     );
 }

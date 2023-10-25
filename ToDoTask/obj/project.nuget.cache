@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CEcDcSCkHT2BbQEEqBl0qaE94IyPY35qnqvdsyy/h3HKn57CWxzvzCH7rhsXq4OaxputRIS/uSCZvaLYsOvY6A==",
+  "dgSpecHash": "UHPzRVmXdn/lN0NxyC8dTU06aFKfGaA9i6zk2G14gq3ZWrL8kYb8O1v1/iXQgMT2n/WzBsjd0tKzIxfD313Quw==",
   "success": true,
-  "projectFilePath": "/Users/michaeldarlington/Projects/ToDoTask/ToDoTask/ToDoTask.csproj",
+  "projectFilePath": "/Users/michaeldarlington/ToDoTask/ToDoTask/ToDoTask.csproj",
   "expectedPackageFiles": [
     "/Users/michaeldarlington/.nuget/packages/microsoft.aspnetcore.nodeservices/3.1.27/microsoft.aspnetcore.nodeservices.3.1.27.nupkg.sha512",
     "/Users/michaeldarlington/.nuget/packages/microsoft.aspnetcore.spaservices/3.1.27/microsoft.aspnetcore.spaservices.3.1.27.nupkg.sha512",
@@ -24,7 +24,7 @@
     "/Users/michaeldarlington/.nuget/packages/microsoft.extensions.primitives/3.1.27/microsoft.extensions.primitives.3.1.27.nupkg.sha512",
     "/Users/michaeldarlington/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
     "/Users/michaeldarlington/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "/Users/michaeldarlington/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.27/microsoft.netcore.app.host.osx-x64.3.1.27.nupkg.sha512",
+    "/Users/michaeldarlington/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.32/microsoft.netcore.app.host.osx-x64.3.1.32.nupkg.sha512",
     "/Users/michaeldarlington/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
