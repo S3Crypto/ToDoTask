@@ -4,26 +4,41 @@ import { addTodo } from '../actions/todosActions';
 
 function AddTodo() {
     const [newTodo, setNewTodo] = useState('');
+    const [error, setError] = useState<string | null>(null);
     const dispatch = useDispatch();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        if (!newTodo.trim()) {
+            setError("Failed to get newTodo");
+            return;
+        }
         if (newTodo.trim()) {
-            dispatch(addTodo({ title: newTodo }));
+            console.log(newTodo)
+            dispatch(addTodo({ description: newTodo }));
             setNewTodo('');
         }
+        setError(null);
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={newTodo}
-                onChange={(e) => setNewTodo(e.target.value)}
-                placeholder="Enter new todo"
-            />
-            <button type="submit">Add</button>
-        </form>
+        <div>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={newTodo}
+                    onChange={(e) => setNewTodo(e.target.value)}
+                    placeholder="Enter new todo"
+                    onBlur={() => {
+                        if (!newTodo.trim()) {
+                            setError("Description cannot be empty");
+                        }
+                    }}
+                />
+                <button type="submit">Add</button>
+            </form>
+        </div>
     );
 }
 

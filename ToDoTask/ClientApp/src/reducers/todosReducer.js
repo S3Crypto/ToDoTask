@@ -1,4 +1,4 @@
-﻿import { SET_TODOS, ADD_TODO, TOGGLE_TODO } from '../actions/todosActions';
+﻿import { SET_TODOS, ADD_TODO, TOGGLE_TODO, ADD_TODO_ERROR } from '../actions/todosActions';
 
 const initialState = [];
 
@@ -16,6 +16,13 @@ const todosReducer = (state = initialState, action) => {
                     ? { ...todo, completed: !todo.completed }
                     : todo
             );
+
+        case ADD_TODO_ERROR:
+            return {
+                ...state,
+                error: action.payload,
+            };
+
 
         default:
             return state;

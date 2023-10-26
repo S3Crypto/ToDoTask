@@ -1,7 +1,10 @@
-﻿// Action types
+﻿
+
+// Action types
 export const SET_TODOS = 'SET_TODOS';
 export const ADD_TODO = "ADD_TODO";
 export const TOGGLE_TODO = "TOGGLE_TODO";
+export const ADD_TODO_ERROR = 'ADD_TODO_ERROR';
 
 // Action creators
 export const getTodos = () => {
@@ -17,21 +20,36 @@ export const setTodos = (todos) => ({
     payload: todos
 });
 
-export const addTodo = (todo) => (dispatch) => {
-    fetch('/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(todo),
-    })
-        .then((response) => response.json())
-        .then((newTodo) => {
+export const addTodo = (content) => {
+    return async dispatch => {
+        try {
+            const response = await fetch('/todos', {
+                method: 'POST',
+                body: JSON.stringify(content),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+
             dispatch({
                 type: ADD_TODO,
-                payload: newTodo
+                payload: data
             });
-        });
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error.message);
+
+            dispatch({
+                type: ADD_TODO_ERROR,
+                payload: error.message
+            });
+        }
+    }
 };
 
 export const toggleTodo = (id) => ({

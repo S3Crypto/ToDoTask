@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -34,6 +35,8 @@ namespace ToDoTask.Controllers
         public IActionResult AddTodo([FromBody] Todo newTodo)
         {
             _logger.Log(LogLevel.Information, "Adding Todo");
+            Todos.Add(newTodo);
+            newTodo.Id = Todos.Count();
             return Ok(newTodo);
         }
 
