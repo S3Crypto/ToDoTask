@@ -15,20 +15,13 @@ Prerequisites:
 Ensure you have Node.js and npm (Node Package Manager) installed on your machine. If not, you can download and install them from the official website.
 
 Installation:
-Clone the repository:
+Clone the repository
 
-bash
-Copy code
-git clone [YOUR REPOSITORY URL]
-cd [YOUR REPOSITORY NAME]
 Install the dependencies:
-
-Copy code
 npm install
+
 Start the application:
 
-sql
-Copy code
 npm start
 This will start the application and open it in your default browser. By default, it will run on http://localhost:3000, unless you've set up a different port.
 
