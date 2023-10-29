@@ -1,4 +1,4 @@
-Todos Application
+<B>Todos Application</B>
 This is a simple Todos application that allows users to manage their tasks by adding new tasks, marking tasks as completed, and viewing lists of pending and completed tasks.
 
 Features:
