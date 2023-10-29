@@ -100,3 +100,4 @@
 /Users/michaeldarlington/ToDoTask/ToDoTask/obj/Debug/netcoreapp3.1/ToDoTask.dll
 /Users/michaeldarlington/ToDoTask/ToDoTask/obj/Debug/netcoreapp3.1/ToDoTask.pdb
 /Users/michaeldarlington/ToDoTask/ToDoTask/obj/Debug/netcoreapp3.1/ToDoTask.genruntimeconfig.cache
+/Users/michaeldarlington/ToDoTask/ToDoTask/bin/Debug/netcoreapp3.1/ClientApp/src/components/TodosList.tsx

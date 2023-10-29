@@ -1,18 +1,24 @@
-﻿import { useDispatch } from 'react-redux';
+﻿import React from 'react';
+import { useDispatch } from 'react-redux';
 import { toggleTodo } from '../actions/todosActions';
 
-export type Todo = {
-    id: number;
-    description: string;
-    isCompleted: boolean;
+export interface ITodo {
+        id: number;
+        description: string;
+        isCompleted: boolean;
 }
 
-function Todo({ todo }: { todo: Todo }) {
+export const Todo: React.FC<ITodo> = ({ id, description, isCompleted }) => {
     const dispatch = useDispatch();
 
     return (
-        <li onClick={() => dispatch(toggleTodo(todo.id))}>
-            {todo.isCompleted ? <s>{todo.description}</s> : todo.description}
+        <li onClick={() => dispatch(toggleTodo(id))}>
+            {isCompleted ? <s>{description}</s> : description}
         </li>
     );
-}
+};
+
+
+
+export default Todo;
+
