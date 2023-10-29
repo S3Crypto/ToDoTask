@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michaeldarlington/Projects/ToDoTask/ToDoTask/ToDoTask.csproj": {}
+    "/Users/michaeldarlington/ToDoTask/ToDoTask/ToDoTask.csproj": {}
   },
   "projects": {
-    "/Users/michaeldarlington/Projects/ToDoTask/ToDoTask/ToDoTask.csproj": {
+    "/Users/michaeldarlington/ToDoTask/ToDoTask/ToDoTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michaeldarlington/Projects/ToDoTask/ToDoTask/ToDoTask.csproj",
+        "projectUniqueName": "/Users/michaeldarlington/ToDoTask/ToDoTask/ToDoTask.csproj",
         "projectName": "ToDoTask",
-        "projectPath": "/Users/michaeldarlington/Projects/ToDoTask/ToDoTask/ToDoTask.csproj",
+        "projectPath": "/Users/michaeldarlington/ToDoTask/ToDoTask/ToDoTask.csproj",
         "packagesPath": "/Users/michaeldarlington/.nuget/packages/",
-        "outputPath": "/Users/michaeldarlington/Projects/ToDoTask/ToDoTask/obj/",
+        "outputPath": "/Users/michaeldarlington/ToDoTask/ToDoTask/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/michaeldarlington/.nuget/NuGet/NuGet.Config"
@@ -49,7 +49,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,7 +61,7 @@
             },
             {
               "name": "Microsoft.NETCore.App.Host.osx-x64",
-              "version": "[3.1.27, 3.1.27]"
+              "version": "[3.1.32, 3.1.32]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
@@ -75,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.416/RuntimeIdentifierGraph.json"
         }
       }
     }
